@@ -41,7 +41,7 @@ async def botcum(client, message):
   elif message.from_user.id == 7182074621:
     await message.reply_text("**sahibimin küçük adamı**🩵")
 
-  elif message.form_user.id == 2040437974:
+  elif message.from_user.id == 2040437974:
     await message.reply_text("**sayın hocamız değerli hocamız✨🤍**")
     
   elif message.from_user.id == 6604549799:
