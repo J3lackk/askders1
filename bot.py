@@ -26,7 +26,7 @@ async def start(client, message):
 
 
   
-@app.on_message(filters.command("botcum") & filters.groups) 
+@app.on_message(filters.command("botcum") & filters.group) 
 async def botcum(client, message):
   
   if message.from_user.id == 6905940236:
