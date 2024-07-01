@@ -52,3 +52,4 @@ async def botcum(client, message):
 
   else:
     await message.reply_text("__Seni tanımıyorum sen kimsin__ 🙈")
+app.run()
