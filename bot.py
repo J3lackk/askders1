@@ -25,7 +25,7 @@ async def start(client, message):
 
     @app.on_message(filters.command("botcum") &filters .private)
     async def botcum (client, mesaage):
-        if message .form_user.id ==
+        if message.form_user.id ==
     6905940236:
              await message.reply_text("**
     Sayın böcük hanım şuan çalışmaltayım 🇹🇷🤍**")
