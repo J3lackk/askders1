@@ -7,7 +7,7 @@ from pyrogram.types import Message
 
 api_id = 26597515
 api_hash = "e556b966e7192209f7f419b07de8cc6a"
-bot_token = "7379409256:AAFndQN5bxWkskWsdGbCyjg2d_MU3RIPKVI"
+bot_token = "7379409256:AAHiIQV-AJYk-JfcaEgg2tSgXh6juk0C1CU"
 
 
 
