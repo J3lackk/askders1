@@ -30,7 +30,7 @@ async def start(client, message):
 async def botcum(client, message):
   
   if message.from_user.id == 6905940236:
-    await message.reply_text("**Sayın böcük hanım şuan çalışmaltayım 🇹🇷🤍**")
+    await message.reply_text("**Sayın böcük hanım şuan çalışmaktayım 🇹🇷🤍**")
  
   elif message.from_user.id == 7142242630:
     await message.reply_text("sassy abla şuan çalışıyorum Merak etme 🥺👉👈**")
