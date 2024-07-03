@@ -1,7 +1,7 @@
 import pyrogram
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from pyrogram.types import lnlineKeyboardMarkup, lnlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 
@@ -20,7 +20,22 @@ app = Client(
 
 
 
-app.on_mesaage(filters.command(["start"])
+@app.on_message(filters.command(["start"]) & filters.private)
+async def start(client, message):
+    keyboard = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [ 
+                InlineKeyboardButton(text="Destek 🎉", url="https://t.me/yikilmayanchat")
+            ],
+            [
+                InlineKeyboardButton(text="Sahip 🦄", url="simarikkizz")
+            ]
+        ]
+    )
+    await mesaage.reply(
+        "Merhaba, ben test deneme butonuyum. Aşağıdaki butonlardan birini seçebilirsiniz:",
+        reply_markup=keynoard
+    )
 
 
   
