@@ -20,9 +20,7 @@ app = Client(
 
 
 
-@app.on_message(filters.command(["start"]))
-async def start(client, message):
-    await message.reply("Ben test deneme botuyum")
+app.on_mesaage(filters.command(["start"])
 
 
   
