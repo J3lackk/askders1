@@ -2,8 +2,6 @@ import pyrogram
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.types import lnlineKeyboardMarkup, lnlineKeyboardButton
-lnlineKeyboardMarkup
-lınlineKeyboardButton
 
 
 
