@@ -28,7 +28,7 @@ async def start(client, message):
                 InlineKeyboardButton(text="Destek 🎉", url="https://t.me/yikilmayanchat")
             ],
             [
-                InlineKeyboardButton(text="Sahip 🦄", url="simarikkizz")
+                InlineKeyboardButton(text="Sahip 🦄", url="https://t.me/simarikkizz")
             ]
         ]
     )
