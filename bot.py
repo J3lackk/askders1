@@ -7,7 +7,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 api_id = 26597515
 api_hash = "e556b966e7192209f7f419b07de8cc6a"
-bot_token = "7379409256:AAHG5ZKngE9gxjdbV1ds75xBGkSxaUUFPHI"
+bot_token = "7379409256:AAGfWK5NOdg6l2yva6fhwpoqBZ_DaJGUjMY"
 
 
 
