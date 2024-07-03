@@ -32,7 +32,7 @@ async def start(client, message):
             ]
         ]
     )
-    await mesaage.reply(
+    await message.reply(
         "Merhaba, ben test deneme butonuyum. Aşağıdaki butonlardan birini seçebilirsiniz:",
         reply_markup=keyboard
     )
