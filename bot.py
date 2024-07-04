@@ -7,7 +7,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 api_id = 26597515
 api_hash = "e556b966e7192209f7f419b07de8cc6a"
-bot_token = "7379409256:AAEM86mK0hsT_Xlx9Cu8VtlCMzYAxq7MgKY"
+bot_token = "7379409256:AAHVQ7mzZ82_SQL4N96g5Tndb1QZYxn5ujc"
 
 
 app = Client(
@@ -63,7 +63,7 @@ async def botcum(client, message):
     await message.reply_text("** sek sek seqooo 🌸❤️‍🔥**") 
       
   elif message.from_user.id == 1853260100:
-    await mesaage.reply_text("** sahibimin güzel prensesi🌸❤🩵✨**")
+    await message.reply_text("** sahibimin güzel prensesi🌸❤🩵✨**")
       
   elif message.from_user.id == 6423044130:
     await message.reply_text("** Google perisi💫💕**") 
