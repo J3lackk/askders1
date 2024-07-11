@@ -75,7 +75,7 @@ async def botcum(client, message):
     await message.reply_text("** Google perisi💫💕**") 
 
   else:
-    await message.reply_text("__Seni tanımıyorum sen kimsin__ 🙈
+    await message.reply_text("**Seni tanımıyorum sen kimsin**🙈")
 
 # bir kullanıcı gruptan ayrıldığında çalışacak fonksiyon 
 @app.on_message(filters.left_chat_member)
