@@ -88,7 +88,7 @@ def welcome(client, message): # hoş geldin mesajı fonksiyonu tanımlıyoruz
 
 # bir kullanıcı gruptan ayrıldığında çalışacak fonksiyon 
 @app.on_message(filters.left_chat_member)
-def goodbye(clirnt, mesaage):
+def goodbye(client, mesaage):
     member = message.left_chat_member
     if member.id == OWNER_ID:
         message.reply(f"maalesef, {member.mention} gruptan ayrıldı. umarım tekrar gelirsin.! ")
