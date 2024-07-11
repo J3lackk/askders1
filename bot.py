@@ -2,7 +2,7 @@ import pyrogram
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
+import random 
 
 
 api_id = 26597515
@@ -94,7 +94,7 @@ def welcome(client, message): # hoş geldin mesajı fonksiyonu tanımlıyoruz
         if member.id == OWNER_ID:  # eğer katılan bot sahibiyse 
             message.reply(f"hoş geldiniz, {member.mention}! Botun sahibinin gruba katılması büyük bir onur.") # özel bir hoş geldin mesajı gönderiyoruz
         else:  # eğer katılan kullanıcı bot sahibi değilse 
-            message.reply(f"hoş geldiniz, {member.mention}! Grubumuza katıldığınız için mutluyuz."). # genel hoş geldin mesajı gönderiyoruz
+            message.reply(f"hoş geldiniz, {member.mention}! Grubumuza katıldığınız için mutluyuz.") # genel hoş geldin mesajı gönderiyoruz
             
 # /para komutunu dinleyen handler
 @app.on_message(filters.command(["para"]) & filters.group)
