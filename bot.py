@@ -97,10 +97,10 @@ def welcome(client, message): # hoş geldin mesajı fonksiyonu tanımlıyoruz
             message.reply(f"hoş geldiniz, {member.mention}! Grubumuza katıldığınız için mutluyuz."). # genel hoş geldin mesajı gönderiyoruz
             
 # /para komutunu dinleyen handler
-@app.on_message(filters.command(["para"]) & filters.group
+@app.on_message(filters.command(["para"]) & filters.group)
 async def para(client, message):
     # Random olarak "yazı" veya "tura" seçimi yapma
     result = random.choice(["Yazı✋", "Tura 🌑"])
-    await message.reply(f"Para atıldı: **{resuly}**")
+    await message.reply(f"Para atıldı: **{result}**")
 
 app.run()
