@@ -112,7 +112,7 @@ slapmessages =[
     "{{, {}'in üstüne kahve fırlattı.☕️",
 ]
 @app.on_message(filters.command("sille"]) & filters.group)
-asycn def sille(client, message):
+async def sille(client, message):
     # komutun bir yanıt olup olmadığını kontrol ediyoruz.
     if not message.reply_to_message:
          await message.reply("bu mesajı kullanmak için bir mesajı yanıtlamakısınız.")
