@@ -19,25 +19,31 @@ app = Client(
 
 
 
+OWNER_ID = 7142242630
+
+
+# /start komutunu özel mesajlarda dinleyen bir handler tanımlıyoruz.
 @app.on_message(filters.command(["start"]) & filters.private)
 async def start(client, message):
+      # butonları içeren bir klavye oluşturuyoruz.
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
             [ 
+                # ilk buton destek chatine yönlendiriliyor.
                 InlineKeyboardButton(text="Destek 🎉", url="https://t.me/yikilmayanchat")
             ],
             [
+                # ikinci buton sahibin profiline yönlendiriyor.
                 InlineKeyboardButton(text="Sahip 🦄", url="https://t.me/simarikkizz")
             ]
         ]
     )
+    # kullanıcıya yanıt olarak bir mesaj gönderiyoruz ve klavyeyi ekliyoruz.
     await message.reply(
         "Merhaba, ben test deneme butonuyum. Aşağıdaki butonlardan birini seçebilirsiniz:",
         reply_markup=keyboard
     )
-
-
-  
+      
 @app.on_message(filters.command("botcum") & filters.group) 
 async def botcum(client, message):
   
@@ -70,4 +76,7 @@ async def botcum(client, message):
 
   else:
     await message.reply_text("__Seni tanımıyorum sen kimsin__ 🙈")
+
+# yeni bir kullancı gruba katıldığında çalışacak 
+@app.on_message
 app.run()
