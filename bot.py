@@ -75,7 +75,17 @@ async def botcum(client, message):
     await message.reply_text("** Google perisi💫💕**") 
 
   else:
-    await message.reply_text("__Seni tanımıyorum sen kimsin__ 🙈")
+    await message.reply_text("__Seni tanımıyorum sen kimsin__ 🙈
+
+# bir kullanıcı gruptan ayrıldığında çalışacak fonksiyon 
+@app.on_message(filters.left_chat_member)
+def goodbye(client, message):
+    member = message.left_chat_member
+    if member.id == OWNER_ID:
+        message.reply(f"maalesef, {member.mention} gruptan ayrıldı. umarım tekrar gelirsin.! ")
+    else:
+        message.reply(f"hoşça kal, {member.mention} seni özleyeceğiz. ")
+            
 
 # yeni bir kullancı gruba katıldığında çalışacak 
 @app.on_message(filters.new_chat_members) # yeni bir kullanıcı gruba katıldığında bu fonksiyon tetiklenecek
@@ -86,13 +96,5 @@ def welcome(client, message): # hoş geldin mesajı fonksiyonu tanımlıyoruz
         else:  # eğer katılan kullanıcı bot sahibi değilse 
             message.reply(f"hoş geldiniz, {member.mention}! Grubumuza katıldığınız için mutluyuz."). # genel hoş geldin mesajı gönderiyoruz
 
-# bir kullanıcı gruptan ayrıldığında çalışacak fonksiyon 
-@app.on_message(filters.left_chat_member)
-async def goodbye(client, message):
-    member = message.left_chat_member
-    if member.id == OWNER_ID:
-        message.reply(f"maalesef, {member.mention} gruptan ayrıldı. umarım tekrar gelirsin.! ")
-    else:
-        message.reply(f"hoşça kal, {member.mention} seni özleyeceğiz. ")
-            
+
 app.run()
