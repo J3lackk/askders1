@@ -135,5 +135,43 @@ async def sille(client, message):
 
     # yanıtlanan mesaja gönderilecek metni oluşturuyoruz
     await message.reply_to_message.reply(slap_message)
+
+    # komutları ve emijileri tanımyalım
+    commands = {
+        "zar": "🎲",
+        "dart": "🎯",
+        "basket": "🏀",
+        "futbol": "⚽️",
+        "bowling": "🎳",
+        "slot": "🎰",
+    }
+    # her bir komut için fonksiyon tanımlayın
+    @app.on_message(filters.command(list(commands.keys())))
+    async def send_dicd(client, message):
+        command = message.command[0][1:] # komutu alır (başındaki '/' işaretini atarak)
+        emoji = commands.get(command)
+        if emoji:
+            dice_message = await message.reply_dice(emoji=emoji)
+
+            # zarın sonucunu beklemek için kısa bir  süre uyuyalım
+            await asyncic.sleep(3) # 3 saniye beklemek için
+
+            # zarın sonucunu içeren mesajı güncelleyelim
+            await message.reply(f"Zar durdu! Gelen sayı: {dice_message.dice.value}")
+
+# doğruluk ve cesaretlik soruları
+dogruluk_soruları = [
+    "En son ne zaman yalan söyledin?",
+    "En son ne zaman ağladın ve ne için?",
+    "En büyük korkun ne?",
+    "Annenin senin hakkında bilmediğine sevindiğin şey nedir?",
+    "Hiç birini aldattın mı?",
+    "Şimdiye kadar yaptığın en kötü şey ne?",
+    "Hiç kimseye söylemediğin bir sır nedir?",
+    "Gizli bir yeteneğin var mı?",
+    "En son ne zaman yalan söyledin?",
+    "En büyük korkun ne?",
+    "
     
-app.run()
+    
+app.run
