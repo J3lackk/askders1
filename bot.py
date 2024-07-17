@@ -136,28 +136,72 @@ async def sille(client, message):
     # yanıtlanan mesaja gönderilecek metni oluşturuyoruz
     await message.reply_to_message.reply(slap_message)
 
-    # komutları ve emijileri tanımyalım
-    commands = {
-        "zar": "🎲",
-        "dart": "🎯",
-        "basket": "🏀",
-        "futbol": "⚽️",
-        "bowling": "🎳",
-        "slot": "🎰",
-    }
-    # her bir komut için fonksiyon tanımlayın
-    @app.on_message(filters.command(list(commands.keys())))
-    async def send_dicd(client, message):
-        command = message.command[0][1:] # komutu alır (başındaki '/' işaretini atarak)
-        emoji = commands.get(command)
-        if emoji:
-            dice_message = await message.reply_dice(emoji=emoji)
+    commandList = [
+    "zar",       
+    "dart",      
+    "basket",    
+    "futbol",    
+    "bowling",   
+    "slot",      
+    "para",      
+    "d",         
+    "c"          
+] #Birden çok komut listeleme filters.command bölümüne eklenir
 
-            # zarın sonucunu beklemek için kısa bir  süre uyuyalım
-            await asyncic.sleep(3) # 3 saniye beklemek için
+@app.on_message(filters.command(commandList))
+async def games(c: Client, m: Message):
+    command = m.command[0]  # Kullanıcının gönderdiği komutu alır
 
-            # zarın sonucunu içeren mesajı güncelleyelim
-            await message.reply(f"Zar durdu! Gelen sayı: {dice_message.dice.value}")
+    if command == "zar":
+       
+        # Bu komut zar emojisini gönderir ve bir zar atma oyunu simüle eder.
+        return await c.send_dice(m.chat.id, emoji="🎲")
+
+    elif command == "dart":
+       
+        # Bu komut dart emojisini gönderir ve bir dart atma oyunu simüle eder.
+        return await c.send_dice(m.chat.id, emoji="🎯")
+
+    elif command == "basket":
+      
+        # Bu komut basketbol emojisini gönderir ve bir basketbol atma oyunu simüle eder.
+        return await c.send_dice(m.chat.id, emoji="🏀")
+
+    elif command == "futbol":
+        
+        # Bu komut futbol emojisini gönderir ve bir futbol oyunu simüle eder.
+        return await c.send_dice(m.chat.id, emoji="⚽")
+
+    elif command == "bowling":
+        
+        # Bu komut bowling emojisini gönderir ve bir bowling oyunu simüle eder.
+        return await c.send_dice(m.chat.id, emoji="🎳")
+
+    elif command == "slot":
+       
+        # Bu komut slot makinesi emojisini gönderir ve bir slot makinesi oyunu simüle eder.
+        return await c.send_dice(m.chat.id, emoji="🎰")
+
+    elif command == "para":
+       
+        # Bu komut rastgele olarak "Yazı" veya "Tura" sonucunu gönderir.
+        return await m.reply(
+            "**Yazı 🪙**" if random.randint(0, 1) == 0 else "**Tura 🪙**"
+        )
+
+    elif command == "d":
+       
+        # Bu komut, kullanıcının "Doğruluk" seçtiğini belirten bir mesaj ve rastgele bir doğruluk sorusu gönderir.
+        return await m.reply_text(
+            f"**✅  Doğruluk mu ? 🔪 Cesaret mi ? \n\n{m.from_user.mention} Doğruluk sorusu seçti !\n\n{random.choice(dogruluk_soruları)}**"
+        )
+
+    elif command == "c":
+ 
+        # Bu komut, kullanıcının "Cesaret" seçtiğini belirten bir mesaj ve rastgele bir cesaret sorusu gönderir.
+        return await m.reply_text(
+            f"**✅  Doğruluk mu ? 🔪 Cesaret mi ? \n\n{m.from_user.mention} Cesaret sorusu seçti !\n\n{random.choice(cesaret_soruları)}**"
+        )
 
 # doğruluk ve cesaretlik soruları
 dogruluk_soruları = [
