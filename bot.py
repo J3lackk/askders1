@@ -275,4 +275,4 @@ dogruluk_soruları = [
     "Yakındaki herkese gülümseyin."
     
     
-app.run
+app.run()
