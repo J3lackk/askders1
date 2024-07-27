@@ -215,6 +215,14 @@ dogruluk_soruları = [
     "Gizli bir yeteneğin var mı?",
     "En son ne zaman yalan söyledin?",
     "En büyük korkun ne?",
+    "Ünlü insanlardan aşık olduğun biri oldh mu?",
+    "Şimdiye kadar yaşadığınız en kötü denyim nedir?",
+    "Hiç bir sınavda kopya çektin mi?",
+    "Şimdiye kadar sarhoş oldun mu?",
+    "Hiç kanunu çiğnedin mi?",
+    "Şimdiye kadar yaptığın en utanç verici şey nedir?",
+    "En büyük güvensizliğin nedir?",
+    "Şimdiye kadar yaptığın en büyük hata nedir?",
     "
     
     
